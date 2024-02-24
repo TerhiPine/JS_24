@@ -1,47 +1,44 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Workshop 1</title>
-		<!-- script tag is where Javascript goes to -->
-		<script>
-			for(var i = 0; i < 400; i++) {
-				console.log("This round is " + i);
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Book Order Calculator</title>
+</head>
+<body>
+    <script src="shopping.js" defer></script>
 
-			//Independent Exercises 1.1 Dogs age
-
-			var age = 33;
-			var dogAge = 7;
-			var total = age * dogAge;
-			console.log("Human's age: " + age)
-			console.log("The dog's age is in human years: " + total);
-
-			//Independent Exercises 1.2 Debugging a script
-
-			var i =5;
-			var j = 10;
-			var k = 25;
-			var l = 'Joe';
-			if (i < j) {
-				console.log("i");
-			} else if (j > k) {
-				console.log("k");
-			} else {
-				console.log("j");
-			}
-			var arr = [3,5,7];
-			for (var i = 0; i <=3; ++i) {
-				console.log(arr[i]);
-			}
-		</script>
-
-	</head>
-
-	<body>
-		<h1>Welcome to example page</h1>
-		<p> Lorem ipsum dolorem...   </p>
-
-	</body>
-
+    <form id="order-form">
+        <fieldset>
+            <p>Calculate a bulk book order.</p>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" required>
+            </div>
+            <div>
+                <label for="price">Price Per Unit</label>
+                <input type="text" name="price" id="price" value="1.00" required>
+            </div>
+            <div>
+                <label for="tax">VAT (%)</label>
+                <input type="text" name="tax" id="tax" value="0.0" required>
+            </div>
+            <div>
+                <label for="discount">Discount</label>
+                <input type="text" name="discount" id="discount" value="0.00" required>
+            </div>
+            <div>
+                <label for="shipping">Shipping</label>
+                <input type="text" name="shipping" id="shipping" value="0.00" required>
+            </div>
+            <div>
+                <label for="total">Total</label>
+                <input type="text" name="total" id="total" value="0.00">
+            </div>
+            <div>
+                <input type="button" value="Calculate" id="submit-calculate">
+            </div>
+        </fieldset>
+    </form>
+</body>
 </html>
